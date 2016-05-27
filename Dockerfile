@@ -10,6 +10,5 @@ RUN apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-EXPOSE 25001 25006 25007 5580
-RUN ls /usr/sbin
+EXPOSE 5580 25001 25006 25007 6550
 CMD ["/usr/bin/supervisord"]
